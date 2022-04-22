@@ -16,11 +16,8 @@ body, * {
 }
 
 .cabecalho {
-	display: grid;
+	display: inline-block;
 	grid-area: cabecalho;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas: "naveg"
 	width: 100%;
 	height: 100%;
 	background-color: #646464;
@@ -33,7 +30,7 @@ body, * {
 	width: 70%;
 	height: auto;
 	position: relative;
-	margin: 0 auto;
+	margin: 0px auto;
 	grid-area: naveg;
 }
 
@@ -84,7 +81,8 @@ body, * {
 	height: 100%;
 	margin: 0 auto;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 2fr);
+	grid-template-rows: repeat(4, 2fr);
+	grid-row-gap: 50px;
 }
 
 .noticia {
@@ -106,18 +104,60 @@ body, * {
 }
 
 .icone-noticia img {
-	width: 30px;
+	width: 35px;
 	padding: 3px;
 }
 
 .titulo-noticia {
-	text-align: center;
 	grid-area: titulo-noticia;
-	padding: 15px;
+	text-align: center;
+	padding: 10px;
+}
+
+.titulo-noticia a {
+	color: black;
+	font-size: 1.3em;
 }
 
 .previa-texto-noticia {
 	text-align: center;
 	grid-area: previa-texto-noticia;
 	padding: 5px;
+	font-size: 1.15em;
+}
+
+.rodape {
+	background: black;
+}
+
+.mensagem-rodape {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 1em;
+	line-height: 1.5em;
+	color: white;
+}
+
+em {
+	font-style: italic;
+}
+
+/*Aqui se inicia o CSS específico da página "Apoiadores"*/
+
+.apoiadores {
+
+}
+
+.lista-apoiadores {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.apoiador {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
 }
