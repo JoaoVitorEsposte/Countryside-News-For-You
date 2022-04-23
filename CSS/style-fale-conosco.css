@@ -1,0 +1,92 @@
+body, * {
+	font-family: 'Akshar', sans-serif;
+}
+
+.principal-grid {
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
+	grid-template-columns: 1fr;
+	width: 100%;
+	height: auto;
+	grid-template-areas: 
+	"cabecalho"
+	"."
+	".";
+	grid-row-gap: 30px;
+}
+
+.cabecalho {
+	display: inline-block;
+	grid-area: cabecalho;
+	width: 100%;
+	height: 100%;
+	background-color: #646464;
+}
+
+.naveg {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 70%;
+	height: auto;
+	position: relative;
+	margin: 0px auto;
+	grid-area: naveg;
+}
+
+.item-naveg {
+	display: grid;
+	grid-template-columns: 0.5fr 2fr;
+	grid-template-rows: 0.4fr 1fr;
+	grid-template-areas: 
+	"icone-naveg titulo-naveg"
+	"icone-naveg legenda-naveg";
+	margin-left: 45px;
+	padding: 15px;
+}
+
+.icone-naveg {
+	grid-area: icone-naveg;
+}
+
+.icone-naveg img {
+	padding: 5px;
+	width: 50px;
+}
+
+.titulo-naveg {
+	padding: 5px;
+	grid-area: titulo-naveg;
+}
+
+.titulo-naveg a {
+	text-decoration: none;
+	color: black;
+	text-align: left;
+	font-size: 1.3em;
+}
+
+.legenda-naveg {
+	padding: 5px;
+	grid-area: legenda-naveg;
+	text-align: left;
+	font-size: 1.1em;
+}
+
+.rodape {
+	background: black;
+}
+
+.mensagem-rodape {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 1em;
+	line-height: 1.5em;
+	color: white;
+}
+
+em {
+	font-style: italic;
+}
