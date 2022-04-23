@@ -95,6 +95,7 @@ body, * {
 	"icone-apoiador sobre-apoiador";
 	grid-gap: 0.1em;
 	padding: 10px;
+	font-size: 1.1em;
 }
 
 .icone-apoiador {

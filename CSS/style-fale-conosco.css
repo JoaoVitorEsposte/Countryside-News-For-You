@@ -10,8 +10,8 @@ body, * {
 	height: auto;
 	grid-template-areas: 
 	"cabecalho"
-	"."
-	".";
+	"formulario"
+	"rodape";
 	grid-row-gap: 30px;
 }
 
@@ -73,8 +73,96 @@ body, * {
 	font-size: 1.1em;
 }
 
+.grid-formulario {
+	display: grid;
+	position: relative;
+	width: 50%;
+	margin: 0 auto 90px auto;
+	grid-template-columns: 0.6fr 1fr;
+	grid-template-rows: repeat(6, 1fr);
+	grid-gap: 1.5em;
+	grid-template-areas:
+	"titulo-formulario titulo-formulario"
+	"nome-usuario mensagem-usuario"
+	"email-usuario mensagem-usuario"
+	"razao-contato mensagem-usuario"
+	"noticias-email mensagem-usuario"
+	"enviar enviar";
+	grid-area: formulario;
+}
+
+.titulo-formulario {
+	grid-area: titulo-formulario;
+	font-size: 1.4em;
+	text-align: center;
+	align-self: center;
+}
+
+.nome-usuario {
+	grid-area: nome-usuario;
+	align-self: center;
+}
+
+.label-padrao {
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+.input-padrao {
+	font-size: 1.2em;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.email-usuario {
+	grid-area: email-usuario;
+	align-self: center;
+}
+
+.razao-contato {
+	grid-area: razao-contato;
+	align-self: center;
+}
+
+.select-razao {
+	font-size: 1.2em;
+	text-align: left;
+}
+
+.mensagem-usuario {
+	grid-area: mensagem-usuario;
+	align-self: top;
+}
+
+.texto-mensagem {
+	resize: none;
+	font-size: 1.2em;
+	vertical-align: top;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.noticias-email {
+	grid-area: noticias-email;
+	align-self: center;
+}
+
+.enviar {
+	grid-area: enviar;
+	background-color: lightgray;
+	font-size: 1.5em;
+	font-weight: bold;
+	transition: 0.05s all;
+}
+
+.enviar:active {
+	background-color: gray;
+}
+
 .rodape {
 	background: black;
+	grid-area: rodape;
 }
 
 .mensagem-rodape {
