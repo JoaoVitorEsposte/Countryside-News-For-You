@@ -73,14 +73,13 @@ body, * {
 	font-size: 1.1em;
 }
 
-/*Aqui começa o CSS da página em questão*/
 .conteudo-noticia {
 	display: grid;
 	grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
+	grid-template-rows: minmax(100px, 140px) auto;
 	grid-template-areas:
 	". inicio-noticia"
-	"menu-lateral texto-noticia";
+	". texto-noticia";
 	grid-row-gap: 30px;
 	grid-column-gap: 20px;
 	width: 60%;
@@ -89,14 +88,19 @@ body, * {
 }
 
 .menu-lateral {
-	grid-area: menu-lateral;
 	display: inline-flex;
 	flex-direction: column;
 	padding: 1em;
 }
 
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 31.99%;
+}
+
 .item-menu-lateral {
-	line-height: 1.5em;
+	line-height: 2.5em;
 	font-size: 1.5em;
 }
 
